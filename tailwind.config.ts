@@ -18,6 +18,9 @@ export default {
       },
     },
     extend: {
+      scale: {
+        '102': '1.02',  // Add this line to support hover:scale-102
+      },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
         opensans: ['Open Sans', 'sans-serif'],
