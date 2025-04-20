@@ -37,10 +37,10 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 to-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-pastel-blue via-pastel-purple to-pastel-pink py-20 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-google-blue to-google-green bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-800">
               AI-Powered Market Research
             </h1>
             <p className="text-xl text-gray-600 mb-8">
@@ -48,7 +48,7 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/register">
-                <Button className="google-button text-lg py-6">
+                <Button className="google-button text-lg py-6 hover-scale">
                   Get Started <ArrowRight className="ml-2" />
                 </Button>
               </Link>
@@ -63,15 +63,15 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-white to-pastel-gray/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Features</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Our Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <HoverCard key={index}>
                 <HoverCardTrigger>
-                  <Card className="google-card h-full cursor-pointer">
-                    <div className="h-48 overflow-hidden rounded-t-lg mb-4">
+                  <Card className="google-card hover-scale h-full cursor-pointer">
+                    <div className="h-48 overflow-hidden rounded-xl mb-4">
                       <img
                         src={feature.image}
                         alt={feature.title}
@@ -79,8 +79,8 @@ const Index = () => {
                       />
                     </div>
                     <CardHeader className="space-y-1">
-                      <CardTitle className="text-xl">{feature.title}</CardTitle>
-                      <CardDescription>{feature.description}</CardDescription>
+                      <CardTitle className="text-xl text-gray-800">{feature.title}</CardTitle>
+                      <CardDescription className="text-gray-600">{feature.description}</CardDescription>
                     </CardHeader>
                   </Card>
                 </HoverCardTrigger>
@@ -99,17 +99,17 @@ const Index = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-20 bg-gradient-to-br from-pastel-green/30 to-pastel-blue/30">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-12">Why Choose TrendInsight?</h2>
+            <h2 className="text-3xl font-bold mb-12 text-gray-800">Why Choose TrendInsight?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-sm"
+                  className="flex items-center space-x-3 glass-card p-4 hover-scale"
                 >
-                  <Check className="text-google-green flex-shrink-0" />
+                  <Check className="text-pastel-green flex-shrink-0" />
                   <span className="text-gray-700">{benefit}</span>
                 </div>
               ))}
@@ -119,14 +119,14 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-google-blue text-white">
+      <section className="py-20 bg-gradient-to-r from-pastel-blue via-pastel-purple to-pastel-pink">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">Ready to Transform Your Business?</h2>
+          <p className="text-xl mb-8 text-gray-600">
             Join thousands of businesses making data-driven decisions
           </p>
           <Link to="/pricing">
-            <Button variant="outline" className="bg-white text-google-blue hover:bg-blue-50 text-lg py-6">
+            <Button variant="outline" className="glass-card text-gray-800 hover:bg-white/80 text-lg py-6 hover-scale">
               View Pricing
             </Button>
           </Link>
